@@ -6,6 +6,8 @@ import java.util.Date;
 public class AccommodationBooking extends Booking {
     private enum roomType{SINGLE, DOUBLE, LUX}
     Tour tour;
+    Accommodation accommodation;
+
 
     public Tour getTour() {
         return tour;
@@ -28,8 +30,6 @@ public class AccommodationBooking extends Booking {
         this.tour = tour;
         this.accommodation = accommodation;
     }
-
-    Accommodation accommodation;
     public AccommodationBooking(int id, LocalDate startDate, LocalDate endDate, float price) {
         super(id, startDate, endDate, price);
     }

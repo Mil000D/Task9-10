@@ -3,11 +3,14 @@ package com.example;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+
 class TourTest {
     Tour tour;
     @BeforeEach
     void setUp() {
-        tour = new Tour(1, "name", "description", 5);
+        tour = new Tour(1, "name", "description", 5, new ArrayList<>());
     }
     @Test
     void testRatingInRange() {

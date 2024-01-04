@@ -1,12 +1,29 @@
 package com.example;
 
-public class CheckoutReport {
+public class Purchase {
     private int id;
     private float totalPrice;
     private Customer customer;
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public Tour getTour() {
+        return tour;
+    }
+
+    public void setTour(Tour tour) {
+        this.tour = tour;
+    }
+
     private Tour tour;
 
-    public CheckoutReport(int id, float totalPrice) {
+    public Purchase(int id, float totalPrice, Customer customer, Tour tour) {
         this.id = id;
         if (!isValidTotalPrice(totalPrice))
             throw new IllegalArgumentException("Total price must be positive");

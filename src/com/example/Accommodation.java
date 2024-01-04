@@ -3,6 +3,7 @@ package com.example;
 import com.example.City;
 
 import java.util.Date;
+import java.util.List;
 
 public class Accommodation {
     private int id;
@@ -12,6 +13,26 @@ public class Accommodation {
     private String phone;
     private String email;
 
+    public List<AccommodationBooking> getAccommodationBookings() {
+        return accommodationBookings;
+    }
+
+    public Accommodation(int id, String address, String description, float rating, String phone, String email, List<AccommodationBooking> accommodationBookings, City city) {
+        this.id = id;
+        this.address = address;
+        this.description = description;
+        this.rating = rating;
+        this.phone = phone;
+        this.email = email;
+        this.accommodationBookings = accommodationBookings;
+        this.city = city;
+    }
+
+    public void setAccommodationBookings(List<AccommodationBooking> accommodationBookings) {
+        this.accommodationBookings = accommodationBookings;
+    }
+
+    private List<AccommodationBooking> accommodationBookings;
     public boolean bookAccommodation(Date startDate, Date endDate) {
         return true;
     }

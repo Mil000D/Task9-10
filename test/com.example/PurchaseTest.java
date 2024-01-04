@@ -4,11 +4,16 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class CheckoutReportTest {
-    CheckoutReport checkoutReport;
+import java.util.ArrayList;
+
+class PurchaseTest {
+    Purchase checkoutReport;
     @BeforeEach
     public void setUp() {
-        checkoutReport = new CheckoutReport(1, 1);
+        checkoutReport = new Purchase(1, 1,
+                new Customer(1, "login", "password", "name", "address@gmail.com", "+48345665343", "address"),
+                new Tour(1, "name", "description", 3, new ArrayList<>())
+        );
     }
     @Test
     void testTotalPrice() {
